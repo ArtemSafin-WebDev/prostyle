@@ -1,0 +1,26 @@
+.page-header {
+    background-color: #fff;
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.page-header__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--header-height, 0);
+    flex-direction: column;
+}
+
+.page-header__logo-image {
+    width: 15.3rem;
+    height: auto;
+    margin: auto;
+
+    @include breakpoint(mobile) {
+        width: 8rem;
+    }
+}

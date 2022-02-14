@@ -1,0 +1,96 @@
+.photo-variant {
+    cursor: pointer;
+    display: block;
+    user-select: none;
+}
+
+.photo-variant__input {
+    display: none;
+}
+
+.photo-variant__content {
+    display: block;
+    padding: 2rem;
+    background: #eff3f4;
+    border-radius: 0.4rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        border-radius: 0;
+    }
+}
+
+.photo-variant__photo-container {
+    position: relative;
+    display: block;
+    &::before {
+        content: '';
+        padding-bottom: 120%;
+        display: block;
+    }
+}
+
+.photo-variant__photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-variant__mark {
+    position: absolute;
+    width: 3.3rem;
+    height: 3.3rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c0c0c0;
+    background: #eff3f4;
+    border-radius: 0.4rem;
+    left: 0.6rem;
+    top: 0.6rem;
+    transition: background-color 0.2s;
+    svg {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--text-color);
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    @include breakpoint(mobile) {
+        width: 1.6rem;
+        height: 1.6rem;
+        left: .5rem;
+        top: .5rem;
+
+        svg {
+            width: 0.9rem;
+            height: 0.9rem;
+        }
+    }
+}
+
+.photo-variant__color {
+    width: 100%;
+    height: 9.2rem;
+    background: #232323;
+    display: block;
+
+    @include breakpoint(mobile) {
+        height: 4.5rem;
+    }
+}
+
+.photo-variant__input:checked ~ .photo-variant__content {
+    .photo-variant__mark {
+        background-color: var(--primary-color);
+
+        svg {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.upload {
+}
+
+.upload__inner {
+    background: #ffffff;
+    border-radius: 0.4rem;
+    padding: 5rem;
+    padding-bottom: 9rem;
+    box-shadow: 0 3rem 5rem -3rem rgba(0, 0, 0, 0.15);
+    max-width: 81rem;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+    border: 1px solid #e9e9e9;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+        padding: 2rem;
+        padding-bottom: 5rem;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+.upload__heading {
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+}
+
+.upload__wrapper {
+    width: 100%;
+    max-width: 34rem;
+    margin: 0 auto;
+}
+
+.upload__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.5rem;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        text-align: center;
+    }
+}
+
+.upload__photo-upload {
+    margin-bottom: 3.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.8rem;
+    }
+}
+
+.upload__submit {
+    width: 100%;
+}
+
+.upload__form {
+    margin-bottom: 5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}

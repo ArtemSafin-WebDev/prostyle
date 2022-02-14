@@ -1,0 +1,43 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="login">
+
+
+
+    <div class="container">
+
+
+        <div class="login__inner">
+            <h1 class="section-heading login__heading">
+                Log In
+            </h1>
+            <form action="/" method="POST" class="login__form" data-need-validation="">
+                <div class="login__form-fields">
+                    <div class="login__form-field">
+                        <input type="text" class="text-input" name="email" required="" placeholder="Email">
+                    </div>
+                    <div class="login__form-field">
+                        <input type="password" class="text-input" name="password" required="" placeholder="Password">
+                    </div>
+
+                </div>
+                <button class="btn login__form-submit">
+                    Зарегистрироватся
+                </button>
+                <div class="info">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-info">
+                        <use xlink:href="#info"></use>
+                    </svg>
+                    Укажите вашу почту и пароль что бы получить доступ к материалам курса. Обратите внимание, что по
+                    окончанию обучения доступ будет
+                    закрыт.
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{{/content}}
+{{/extend}}

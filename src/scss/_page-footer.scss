@@ -1,0 +1,32 @@
+.page-footer {
+    background: #ebebeb;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: #84868b;
+
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+        background: #EBEBEB;
+    }
+}
+
+.page-footer__row {
+    min-height: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        min-height: 9rem;
+    }
+}
+
+.page-footer__copyright {
+    max-width: 20rem;
+}

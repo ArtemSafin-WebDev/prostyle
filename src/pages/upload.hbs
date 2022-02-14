@@ -1,0 +1,45 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="upload js-upload">
+    <div class="container">
+        <div class="upload__inner">
+            <h1 class="section-heading upload__heading">
+                Определение цветовых характеристик
+            </h1>
+            <div class="upload__wrapper">
+                <div class="upload__text">
+                    Перетащите в это окошко подходящую фотографию
+
+                </div>
+                <form action="/" method="POST" class="upload__form" enctype='multipart/form-data'>
+                    <label class="photo-upload js-photo-upload upload__photo-upload">
+                        <input type="file" name="photo" class="photo-upload__input">
+                        <div class="photo-upload__content js-upload-content">
+                            <svg width="14" height="14" aria-hidden="true" class="icon-plus">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                            <div class="photo-upload__text">
+                                Перетащите в это окошко подходящую фотографию
+
+                            </div>
+                        </div>
+                    </label>
+                    <button type="submit" class="btn upload__submit" disabled="">
+                        Пройдите тест
+                    </button>
+                </form>
+                <div class="info">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-info">
+                        <use xlink:href="#info"></use>
+                    </svg>
+                    Загурзите вашу фотографию в соответсии с указаниями чтобы начать тест
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{/content}}
+{{/extend}}
