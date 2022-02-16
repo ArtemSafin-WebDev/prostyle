@@ -11,3 +11,23 @@
         color: var(--text-color);
     }
 }
+
+.text-input-label {
+    display: block;
+}
+
+.text-input-label__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-bottom: 1rem;
+    display: block;
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+
+    }
+}

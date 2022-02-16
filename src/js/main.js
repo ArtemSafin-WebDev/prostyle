@@ -9,6 +9,7 @@ import anchorLinks from './anchorLinks';
 import photoUpload from './photoUpload';
 import upload from './upload';
 import choose from './choose';
+import figureCalculator from './figureCalculator';
 
 
 
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     photoUpload();
     upload();
     choose();
+    figureCalculator();
 });
 
 

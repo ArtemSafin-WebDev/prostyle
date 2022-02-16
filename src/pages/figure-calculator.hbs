@@ -1,0 +1,74 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="figure-calculator js-figure-calculator">
+    <div class="container">
+        <div class="figure-calculator__inner">
+            <div class="figure-calculator__wrapper">
+
+
+                <h1 class="section-heading figure-calculator__heading">
+                    Калькулятор типов фигур
+                </h1>
+                <div class="info figure-calculator__info">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-info">
+                        <use xlink:href="#info"></use>
+                    </svg>
+                    Введите ваши параметры
+
+                </div>
+                <form action="/" method="POST" class="figure-calculator__form">
+                    <div class="figure-calculator__form-fields">
+                        <div class="figure-calculator__form-field">
+                            <label class="text-input-label">
+                                <span class="text-input-label__text">
+                                    Ширина плеч
+                                </span>
+
+                                <input type="tel" class="text-input figure-calculator__input js-numeric-input"
+                                    name="shoulder-width">
+                            </label>
+                        </div>
+                        <div class="figure-calculator__form-field">
+                            <label class="text-input-label">
+                                <span class="text-input-label__text">
+                                    Обьем груди
+                                </span>
+
+                                <input type="tel" class="text-input figure-calculator__input js-numeric-input"
+                                    name="chest-width">
+                            </label>
+                        </div>
+                        <div class="figure-calculator__form-field">
+                            <label class="text-input-label">
+                                <span class="text-input-label__text">
+                                    Обхват талии
+                                </span>
+
+                                <input type="tel" class="text-input figure-calculator__input js-numeric-input"
+                                    name="talia-width">
+                            </label>
+                        </div>
+                        <div class="figure-calculator__form-field">
+                            <label class="text-input-label">
+                                <span class="text-input-label__text">
+                                    Обхват талии
+                                </span>
+
+                                <input type="tel" class="text-input figure-calculator__input js-numeric-input"
+                                    name="hips-width">
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn figure-calculator__form-submit" disabled="">
+                        Расчитать
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{/content}}
+{{/extend}}
