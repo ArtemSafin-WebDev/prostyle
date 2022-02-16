@@ -251,3 +251,41 @@
         width: 100%;
     }
 }
+
+.results__content {
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.results__images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    margin: 8rem 0;
+    @include breakpoint(mobile) {
+        grid-gap: 2.4rem;
+        grid-template-columns: minmax(0, 1fr);
+        margin: 3.4rem 0;
+    }
+}
+
+.results__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
