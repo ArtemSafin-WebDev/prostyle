@@ -25,8 +25,16 @@ html {
     box-sizing: border-box;
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
-
+   
     @include noHighlight();
+
+    @media screen and (max-width: 1440px) {
+        font-size: clamp(4.2px, 0.7vw, 25px);
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 10px;
+    }
 }
 
 body {
