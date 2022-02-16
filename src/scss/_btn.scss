@@ -5,13 +5,14 @@
     transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
     border-radius: 0.4rem;
     text-align: center;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 1rem 2rem;
     background-color: var(--primary-color);
     color: var(--text-color);
     box-shadow: 0 1.7rem 5rem -0.5rem rgba(0, 0, 0, 0.3);
+    width: 33.6rem;
     &:link,
     &:visited {
         color: var(--text-color);
@@ -41,5 +42,6 @@
         font-size: 1.4rem;
         line-height: 2.4rem;
         padding: 1rem 2rem;
+        width: 100%;
     }
 }
