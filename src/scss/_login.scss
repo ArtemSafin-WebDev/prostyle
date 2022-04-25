@@ -34,6 +34,7 @@
 .login__form-submit {
     margin-bottom: 3.5rem;
     width: 100%;
+    color: white;
     @include breakpoint(mobile) {
         margin-bottom: 3rem;
     }

@@ -94,10 +94,10 @@
         color: var(--text-color);
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    .no-touch &:not(.active):hover,
+    .touch &:not(.active):active {
         background-color: var(--primary-color);
-        color: var(--text-color);
+        color: white;
         box-shadow: 0 2rem 4rem -2rem rgba(0, 0, 0, 0.4);
     }
 
@@ -113,9 +113,9 @@
     &.active {
         margin: 1rem 0;
         background-color: var(--primary-color);
-        color: var(--text-color);
+        color: white;
         box-shadow: 0 2rem 4rem -2rem rgba(0, 0, 0, 0.4);
-
+        cursor: default;
         @include breakpoint(mobile) {
             margin: 0;
             box-shadow: none;

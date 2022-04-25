@@ -12,6 +12,10 @@
     margin-bottom: 10rem;
     border: 1px solid #e9e9e9;
 
+    &--equal {
+        padding-bottom: 7rem;
+    }
+
     @include breakpoint(mobile) {
         margin-bottom: 6rem;
         padding: 2rem;
@@ -31,12 +35,24 @@
     margin-bottom: 2.5rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 1.2rem;
+        margin-bottom: 2rem;
+     
     }
 }
 
 .figure-calculator__info {
     margin-bottom: 2.5rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    svg {
+        fill: var(--primary-color);
+    }
 }
 
 .figure-calculator__form-fields {
@@ -48,19 +64,22 @@
     @include breakpoint(mobile) {
         grid-gap: 2rem;
     }
-
 }
 
 .figure-calculator__form-submit {
     width: 100%;
+    color: white;
 }
-
 
 .figure-calculator__wrapper {
     width: 100%;
     margin: 0 auto;
 
     max-width: 34rem;
+
+    &--wide {
+        max-width: 42rem;
+    }
 
     @include breakpoint(mobile) {
         max-width: none;
@@ -73,4 +92,19 @@
     @include breakpoint(mobile) {
         margin-bottom: 4rem;
     }
+}
+
+.figure-calculator__btns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 1rem;
+    margin-top: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 4rem;
+    }
+}
+
+.figure-calculator__btn {
+    width: 100%;
 }

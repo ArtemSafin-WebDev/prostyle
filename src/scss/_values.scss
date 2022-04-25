@@ -93,7 +93,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 1.8rem;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, border-color .2s;
     svg {
         width: 2rem;
         height: 2rem;
@@ -118,6 +118,7 @@
 
 .values__checkbox-input:checked ~ .values__checkbox-mark {
     background-color: var(--primary-color);
+    border-color: var(--primary-color);
     svg {
         opacity: 1;
     }

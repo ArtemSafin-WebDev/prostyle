@@ -1,0 +1,106 @@
+.greeting {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    .container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.greeting__inner {
+    background: #ffffff;
+    border-radius: 0.4rem;
+    padding: 5rem;
+    padding-bottom: 12rem;
+    box-shadow: 0 3rem 5rem -3rem rgba(0, 0, 0, 0.15);
+    max-width: 69.5rem;
+    margin: 0 auto;
+    margin-bottom: 24rem;
+    border: 1px solid #e9e9e9;
+    margin-top: 18rem;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        margin: auto 0;
+        padding: 2rem;
+        padding-bottom: 4rem;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+.greeting__logo-wrapper {
+    padding-bottom: 2.8rem;
+    border-bottom: 1px solid #a6a6a6;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.greeting__logo {
+    width: 23rem;
+    height: auto;
+    margin: 0 auto;
+
+    @include breakpoint(mobile) {
+        width: 14rem;
+    }
+}
+
+.greeting__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+    max-width: 43rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.greeting__link {
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: white;
+    padding: 1rem;
+    padding-left: 3.4rem;
+    padding-right: 3.4rem;
+    justify-content: space-between;
+    width: 23rem;
+    border-radius: 0.4rem;
+    background-color: var(--primary-color);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.22);
+    align-self: center;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    svg {
+        flex-shrink: 0;
+        fill: currentColor;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 2rem;
+    }
+}

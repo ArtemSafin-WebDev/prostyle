@@ -2,6 +2,9 @@
     cursor: pointer;
     display: block;
     user-select: none;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .photo-variant__input {
@@ -13,6 +16,7 @@
     padding: 2rem;
     background: #eff3f4;
     border-radius: 0.4rem;
+    flex-grow: 1;
 
     @include breakpoint(mobile) {
         padding: 0;
@@ -52,7 +56,7 @@
     border-radius: 0.4rem;
     left: 0.6rem;
     top: 0.6rem;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, border-color 0.2s;
     svg {
         width: 2rem;
         height: 2rem;
@@ -64,8 +68,8 @@
     @include breakpoint(mobile) {
         width: 1.6rem;
         height: 1.6rem;
-        left: .5rem;
-        top: .5rem;
+        left: 0.5rem;
+        top: 0.5rem;
 
         svg {
             width: 0.9rem;
@@ -79,18 +83,49 @@
     height: 9.2rem;
     background: #232323;
     display: block;
+    position: relative;
+    display: flex;
 
     @include breakpoint(mobile) {
         height: 4.5rem;
     }
 }
 
+.photo-variant__color-image {
+    // position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 50%;
+    flex-grow: 1;
+    height: 100%;
+    object-fit: cover;
+}
+
 .photo-variant__input:checked ~ .photo-variant__content {
     .photo-variant__mark {
         background-color: var(--primary-color);
-
+        border-color: var(--primary-color);
         svg {
             opacity: 1;
         }
+    }
+}
+
+.photo-variant__desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-top: 2rem;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin: 0;
+        padding: 1.2rem 0;
     }
 }

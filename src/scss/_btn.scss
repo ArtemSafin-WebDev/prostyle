@@ -10,12 +10,12 @@
     justify-content: center;
     padding: 1rem 2rem;
     background-color: var(--primary-color);
-    color: var(--text-color);
+    color: white;
     box-shadow: 0 1.7rem 5rem -0.5rem rgba(0, 0, 0, 0.3);
     width: 33.6rem;
     &:link,
     &:visited {
-        color: var(--text-color);
+        color: white;
     }
 
     &[disabled] {
