@@ -51,6 +51,7 @@
     font-size: 1.8rem;
     line-height: 2.4rem;
     margin-bottom: 2rem;
+    text-align: left;
 
     @include breakpoint(mobile) {
         text-align: center;
@@ -134,12 +135,13 @@
 }
 
 .results__inner {
-    padding: 5rem 12rem;
-    padding-bottom: 14rem;
+    padding: 5rem 5rem;
+    padding-bottom: 6rem;
     background-color: #fff;
     border-radius: 0.4rem;
     border: 1px solid #e9e9e9;
     max-width: 94rem;
+    margin: 0 auto;
 
     @include breakpoint(mobile) {
         padding: 2rem;
@@ -150,10 +152,12 @@
 }
 
 .results__heading {
-    margin-bottom: 4.5rem;
+    margin-bottom: 3.5rem;
+    text-align: left;
 
     @include breakpoint(mobile) {
         margin-bottom: 1.5rem;
+        text-align: center;
     }
 }
 
@@ -171,13 +175,56 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
     grid-row-gap: 2rem;
-    margin-bottom: 7rem;
 
     @include breakpoint(mobile) {
         grid-gap: 1rem;
         grid-row-gap: 2.4rem;
-        margin-bottom: 4rem;
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.results__btns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 2rem;
+    margin-top: 7rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1rem;
+        margin-top: 3rem;
+    }
+}
+
+.results__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c9cdd1;
+    border-radius: 0.4rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    gap: 1rem;
+    padding: 1rem;
+
+    svg {
+        fill: currentColor;
+        flex-shrink: 0;
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
+
+.results__btn--filled {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    &:link,
+    &:visited {
+        color: white;
     }
 }
 
@@ -187,8 +234,8 @@
     border-radius: 0.4rem;
 
     @include breakpoint(mobile) {
-        padding: 0;
-        border-radius: 0;
+        padding: 0.8rem;
+        // border-radius: 0;
     }
 }
 
@@ -211,44 +258,72 @@
 }
 
 .results__image-card-color {
-    height: 6rem;
+    height: 7rem;
     background-color: var(--text-color);
+    display: flex;
 
     @include breakpoint(mobile) {
         height: 4.5rem;
     }
 }
 
+.results__image-card-color-item {
+    width: 50%;
+    flex-grow: 1;
+    position: relative;
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.results__palette {
+    margin-top: 4rem;
+}
+
 .results__palette-heading {
     font-style: normal;
     font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.8rem;
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 500;
         font-size: 1.6rem;
         line-height: 2rem;
+        margin-bottom: 1.5rem;
     }
 }
 
-.results__palette-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-bottom: 9rem;
+.results__palette-colors {
+    display: grid;
+    grid-template-columns: repeat(17, minmax(0, 1fr));
+    grid-gap: 0.6rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 4.5rem;
+        grid-template-columns: repeat(8, minmax(0, 1fr));
     }
 }
 
-.results__download-link {
-    width: 34rem;
-
-    @include breakpoint(mobile) {
+.results__palette-color {
+    position: relative;
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
     }
 }
 
@@ -288,4 +363,23 @@
     display: block;
     width: 100%;
     height: auto;
+}
+
+.results__image-card-desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: center;
+    margin-top: 1.3rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin-top: 1.2rem;
+        margin-bottom: 0.4rem;
+        padding: 0;
+    }
 }
